@@ -32,12 +32,16 @@ module 0x0::bullish{
         let Student {id: id, name: _, score: _} = get_student;
         object::delete(id);
     }
+
+    public fun private_i(){}
 }
 
 module 0x0::bearish{
-
+    fun call_private_i(){
+        0x0::bullish::private_i();
+    }
 }
 
 module 0x0::oddly{
-    
+
 }
