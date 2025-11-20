@@ -37,11 +37,9 @@ module 0x0::bullish{
 }
 
 module 0x0::bearish{
+
+    #[allow(unused_function)]
     fun call_private_i(){
         0x0::bullish::private_i();
     }
-}
-
-module 0x0::oddly{
-
 }
