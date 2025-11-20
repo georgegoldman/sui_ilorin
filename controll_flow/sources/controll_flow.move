@@ -70,4 +70,16 @@ module 0x0::xyz {
         }
 
     }
+
+    #[test]
+    fun break_continue() {
+        let mut i = 0;
+        while (i < 5) {
+            if (i == 2) {
+                break;
+            };
+            print(&i);
+            i = i +1;
+        }
+    }
 }
